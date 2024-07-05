@@ -56,7 +56,7 @@ class FuncBase:
                 cur_id = self.line_func[lineno + 1]
                 continue
             for obj in self.func_list:
-                if re.search(r".*?{}\s*\(".format(obj.name), s) is not None:
+                if re.search(r".*?{}\s*\(.*\)".format(obj.name), s) is not None:
                     self.log.info(
                         "Find a function call: line: {}, relation: {} -> {}".format(
                             lineno + 1, self.func_list[cur_id].name, obj.name
