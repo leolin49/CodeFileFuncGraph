@@ -70,7 +70,7 @@ class FuncCpp(FuncBase):
                 # commentary line
                 continue
             funcs = re.findall(
-                r"\s*([A-Za-z_]+\w*)\s+([A-Za-z_]+\w*[()]*)\s*\((.*?)\)\s*{*", s
+                r"\s*([A-Za-z_]+[<>/w]*)\s+([A-Za-z_]+\w*[()]*)\s*\((.*?)\)\s*{", s
             )
             if len(funcs) == 0:
                 # not match

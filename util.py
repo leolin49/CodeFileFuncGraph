@@ -42,8 +42,8 @@ def show_graph(dig: nx.DiGraph, g_cfg: GraphConfig):
 
     # the directed graph layout format
     # pos = nx.spring_layout(dig, k=1)
-    # pos = nx.arf_layout(dig)
-    pos = nx.drawing.nx_pydot.graphviz_layout(dig, prog="dot")
+    pos = nx.arf_layout(dig)
+    # pos = nx.drawing.nx_pydot.graphviz_layout(dig, prog="dot")
 
     nx.draw(dig, pos, with_labels=True)
     # draw nodes
